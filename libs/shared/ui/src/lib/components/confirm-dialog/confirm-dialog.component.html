@@ -1,0 +1,27 @@
+<div class="dialog">
+  <div class="dialog-title-wrapper">
+    <h6 class="dialog-title" *ngIf="data.title">
+      {{ data.title }}
+    </h6>
+  </div>
+  <p class="dialog-content">{{ data.content }}</p>
+
+  <div class="dialog-actions">
+    <button
+      mat-stroked-button
+      type="submit"
+      (click)="confirmDialog()"
+      color="primary"
+    >
+      Ok
+    </button>
+    <button
+      mat-stroked-button
+      type="button"
+      (click)="closeDialog()"
+      color="secondary"
+    >
+      Cancel
+    </button>
+  </div>
+</div>

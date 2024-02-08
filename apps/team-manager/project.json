@@ -8,19 +8,26 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/team-manager",
         "index": "apps/team-manager/src/index.html",
         "main": "apps/team-manager/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/team-manager/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/team-manager/src/favicon.ico",
           "apps/team-manager/src/assets"
         ],
-        "styles": ["apps/team-manager/src/styles.scss"],
+        "styles": [
+          "@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/team-manager/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {

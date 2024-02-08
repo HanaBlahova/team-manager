@@ -1,0 +1,26 @@
+<div class="team-list">
+  <div class="team-list-header">
+    <h2>Teams</h2>
+    <button mat-stroked-button color="primary" (click)="addTeam()">
+      Add team
+    </button>
+  </div>
+  <div class="team-list-body">
+    <mat-table [dataSource]="teams">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <a class="team-list-body-item-link" [routerLink]="[element.id]"> {{ element.name }}</a>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="members">
+        <mat-header-cell *matHeaderCellDef>No. of members</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.membersList?.length }}
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </div>
+</div>

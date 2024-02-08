@@ -1,0 +1,17 @@
+.team-list {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-body {
+    &-item-link {
+      text-decoration: none;
+      color: #000;
+
+      &:hover {
+        color: #3f51b5;
+      }
+    }
+  }
+}

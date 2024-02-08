@@ -1,0 +1,29 @@
+.dialog {
+  padding: 1rem;
+
+  &-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  &-content {
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  &-actions {
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}

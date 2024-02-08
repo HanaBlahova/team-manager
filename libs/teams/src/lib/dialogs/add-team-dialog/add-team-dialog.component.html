@@ -1,0 +1,28 @@
+<div class="dialog">
+  <div class="dialog-title-wrapper">
+    <h6 class="dialog-title">@if(data?.team) {Edit team} @else {Add team}</h6>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="dialog-form-field">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Name" />
+    </mat-form-field>
+    <div class="dialog-actions">
+      <button
+        mat-stroked-button
+        type="submit"
+        color="primary"
+      >
+        @if(data?.team) {Edit} @else {Add}
+      </button>
+      <button
+        mat-stroked-button
+        type="button"
+        (click)="closeDialog()"
+        color="secondary"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

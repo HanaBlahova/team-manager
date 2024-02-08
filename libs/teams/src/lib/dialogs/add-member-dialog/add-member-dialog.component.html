@@ -1,0 +1,46 @@
+<div class="dialog">
+  <div class="dialog-title-wrapper">
+    <h6 class="dialog-title">Add member to list</h6>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="dialog-form-field">
+      <mat-label>Member</mat-label>
+      <mat-select formControlName="memberId" placeholder="Choose member">
+        <mat-option
+          *ngFor="let member of availableMembers$ | async"
+          [value]="member.id"
+          >{{ member.name }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dialog-form-field">
+      <mat-label>Role</mat-label>
+      <mat-select formControlName="role" placeholder="Choose role">
+        <mat-option *ngFor="let role of roles" [value]="role">{{
+          role
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="dialog-form-field">
+      <mat-label>Position</mat-label>
+      <input matInput formControlName="position" placeholder="Position" />
+    </mat-form-field>
+    <div class="dialog-actions">
+      <button
+        mat-stroked-button
+        type="submit"
+        color="primary"
+      >
+        Add
+      </button>
+      <button
+        mat-stroked-button
+        type="button"
+        (click)="closeDialog()"
+        color="secondary"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

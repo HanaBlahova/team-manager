@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@team-manager/models": ["libs/shared/models/src/index.ts"],
+      "@team-manager/shared": ["libs/shared/src/index.ts"],
+      "@team-manager/teams": ["libs/teams/src/index.ts"],
+      "@team-manager/ui": ["libs/shared/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
